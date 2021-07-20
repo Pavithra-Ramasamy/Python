@@ -1,0 +1,227 @@
+First n prime numbers:
+
+num=int(input())
+print("1",end=" ")
+print("2",end=" ")
+c=2
+i=2
+while(c<num):
+    i=i+1
+    f=0
+    for j in range(2,i//2+1):
+        if(i%j==0):
+            f=1
+            break
+    if(f==0):    
+        print(i,end=" ")
+        c=c+1
+----------------------------------------------------------------------
+prime till given number:
+
+num=int(input())
+print("1",end=" ")
+print("2",end=" ")
+c=0
+for i in range(3,num+1):
+    f=0
+    for j in range(2,i//2+1):
+        if(i%j==0):
+            f=1
+            break
+    if(f==0):    
+        print(i,end=" ")
+        c=c+1
+-----------------------------------------------------------------------
+Factorial
+import math
+a=int(input())
+print(math.factorial(a))
+---------------------------------------------------------------------
+a=int(input())
+fact=1
+for i in range(1,a+1):
+    fact=fact*i
+print(fact)    
+-----------------------------------------------------------------------------
+a=input()
+b=ord(a)#returs ASCII value
+print(b)  
+print(chr(b))#returns char to that ascii value
+--------------------------------------------------------------------------
+reverse using striding
+a=input()
+print(a[::-1])
+print(a[-1:-6:-2])#example
+------------------------------------------------------------------------------
+
+Matrix addition
+r=int(input())
+c=int(input())
+a=[]
+b=[]
+add=[]
+for i in range(0,r):
+    x=[]
+    for j in range(0,r):
+        n=int(input())
+        x.append(n)
+    a.append(x)    
+for i in range(0,r):
+    y=[]
+    for j in range(0,r):
+        n1=int(input())
+        y.append(n1)
+    b.append(y) 
+for i in range(0,r):
+    s=[]
+    for j in range(0,r):
+        sum=a[i][j]+b[i][j]
+        s.append(sum)
+    add.append(s)
+print(add)  
+
+````````````````````````````````````
+using numpy
+
+import numpy as np
+r=int(input())
+c=int(input())
+a=[]
+b=[]
+for i in range(0,r):
+    x=[]
+    for j in range(0,r):
+        n=int(input())
+        x.append(n)
+    a.append(x)    
+for i in range(0,r):
+    y=[]
+    for j in range(0,r):
+        n1=int(input())
+        y.append(n1)
+    b.append(y) 
+res=np.add(a,b) 
+print(res)
+  
+    
+------------------------------------------------------------------------------------------
+Matrix multiplication using numpy
+imprt numpy as np
+result = np.dot(A,B)
+-----------------------------------------------------------------------------------------
+1.Find the largest possible prime number which is less than the given number
+a=int(input())
+b=[2]
+flag=0
+for i in range(3,a):
+    for j in range(2,i):
+        if(i%j==0):
+            flag=0
+            break
+        else:
+           flag=1
+    if(flag==1):
+        b.append(i)
+print(max(b))  
+------------------------------------------------------------------------------------
+2.Find the Missing Number 
+n=int(input())
+b=[]
+for i in range(0,n):
+    a=int(input())
+    b.append(a)
+b.sort()
+for i in range(0,n):
+    if(b[i]!=i+1):
+        print(i+1)
+        break
+-------------------------------------------------------------------------------------        
+        
+3.Special Number
+n=int(input())
+a=n//10
+b=n%10
+add=a+b
+mul=a*b
+tot=add+mul
+if(tot==n):
+    print("special number")
+else:
+    print("Not a special number")
+------------------------------------------------------------------------------------    
+5.Minimum difference pair
+a=int(input())
+l=[]
+diff=[]
+for i in range(0,a):
+    b=int(input())
+    l.append(b)
+l=sorted(l,reverse=True)    
+for i in range(0,len(l)):
+    for j in range(i+1,len(l)):
+        c=l[i]-l[j]
+        diff.append(c)
+print(min(diff))  
+-----------------------------------------------------------------------------------
+6.FooBar
+a=int(input())
+l=[]
+for i in range(0,a):
+    b=int(input())
+    l.append(b)
+for i in range(0,len(l)):
+    if((l[i]%3==0)and(l[i]%5==0)):
+        print("FooBar")
+    elif(l[i]%3==0):
+        print("Foo")
+    elif(l[i]%5==0):
+         print("Bar")
+    else:
+        print("None") 
+ ---------------------------------------------------------------------------------       
+8.Addition of Binary integers
+a=input()
+b=input()
+c=[]
+carry=0
+max1=max(len(a),len(b))
+a=a.zfill(max1)
+b=b.zfill(max1)
+a=list(a)
+b=list(b)
+for i in range(max1-1,-1,-1):
+    d=0
+    if(int(a[i])==1 and int(b[i])==1 and carry==1 and i==0):
+        c.append(1)
+        c.append(1)
+    elif(int(a[i])==1 and int(b[i])==1 and carry==1):
+        c.append(1)
+        carry=1
+        
+    elif(int(a[i])==1 and int(b[i])==1 ):
+        c.append(d)
+        carry=1
+        
+    elif((int(a[i])==1 and int(b[i])==0) or (int(a[i])==0 and int(b[i])==1)):
+        d=carry+1
+        if(d==2 and i==0):
+            c.append(0)
+            c.append(1)
+        
+        elif(d==2):
+            c.append(0)
+            carry=1
+            
+        else:
+            c.append(1)
+    elif(int(a[i])==0 and int(b[i])==0):
+         d=carry+0
+         c.append(d)
+         carry=0
+e=c[::-1]
+for i in e: 
+    print(i, end="") 
+ ----------------------------------------------------------------------------------------------------------------
+ 
+
+
