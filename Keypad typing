@@ -1,0 +1,19 @@
+a=input()
+a=list(a)
+for i in a:
+    if((i>='A' and i<='C')or(i>='a' and i<='c')):
+        print('2',end="")
+    elif((i>='D' and i<='F')or(i>='d' and i<='f')):
+        print('3',end="")
+    elif((i>='G' and i<='I')or(i>='g' and i<='i')):
+        print('4',end="")
+    elif((i>='J' and i<='L')or(i>='j' and i<='l')):
+        print('5',end="")
+    elif((i>='M' and i<='O')or(i>='m' and i<='o')):
+        print('6',end="") 
+    elif((i>='P' and i<='S')or(i>='p' and i<='s')):
+        print('7',end="")
+    elif((i>='T' and i<='V')or(i>='t' and i<='v')):
+        print('8',end="")
+    elif((i>='W' and i<='Z')or(i>='w' and i<='z')):
+        print('9',end="")    
