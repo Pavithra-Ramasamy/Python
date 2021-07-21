@@ -1,0 +1,11 @@
+l=[]
+n=int(input("numbers"))
+for i in range(n):
+    l.append(int(input("values")))
+print(l)
+l=sorted(l)
+b=l[0]-1
+for i in range(0,len(l)):
+    b+=1
+    if(l[i]!=b):
+        print(b)
