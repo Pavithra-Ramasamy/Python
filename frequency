@@ -1,0 +1,10 @@
+a=input().split()
+b=[]
+dict={}
+for i in range(len(a)):
+    a[i]=int(a[i])   
+sorted(a)
+for i in a:
+    dict[i]=a.count(i)
+for key, value in dict.items(): 
+    print ("% d : % d"%(key, value)) 
