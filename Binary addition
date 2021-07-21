@@ -1,0 +1,55 @@
+a=input() 
+b=input() 
+a=bin(int(a))
+a=a[2::]
+b=bin(int(b))
+b=b[2::]
+c='0'
+l=[]
+if(len(b)!=len(a)):
+    if(len(b)>len(a)):
+        a=a.zfill(len(b))
+    else:
+        b=b.zfill(len(a))
+x=len(b)
+x=-(x+1)
+for i in range(-1,x,-1):
+    if(a[i]=='1' and b[i]=='0' and c=='0'):
+        l.append('1')
+        #print('1',end="")
+    if(i<-1):
+        if(a[i]=='1' and b[i]=='0' and c=='1'):
+            l.append('0')
+            #print('0',end="")
+            c='1'
+    if(a[i]=='0' and b[i]=='1' and c=='0'):
+        l.append('1')
+        #print('1',end="")
+    if(i<-1):
+        if(a[i]=='0' and b[i]=='1' and c=='1'):
+            l.append('0')
+            #print('0',end="")
+            c='1'
+    if(a[i]=='0' and b[i]=='0' and c=='0'):
+        l.append('0')
+        #print('0',end="") 
+    if(i<-1):
+        if(a[i]=='0' and b[i]=='0' and c=='1'):
+            l.append('1')
+            #print('1',end="")
+    if(i<-1):
+            
+        if(a[i]=='1' and b[i]=='1' and c=='1'):
+            if(i==x+1):
+                l.append('1')
+                l.append('1')
+        
+            else:
+                l.append('1')
+                #print('1',end="")
+                c='1'        
+    if(a[i]=='1' and b[i]=='1' and c=='0'):
+        l.append('0')
+        #print('0',end="")
+        c='1’
+print(l[::-1])            
