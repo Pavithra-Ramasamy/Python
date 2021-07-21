@@ -1,0 +1,9 @@
+a=int(input())
+d=[]
+for i in range(0,a+1):
+    b=bin(i)
+    list(b)
+    c=b.count('1')
+    d.append(c)
+    e=sum(d)
+print(e) 
