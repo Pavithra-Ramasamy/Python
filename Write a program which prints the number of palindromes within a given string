@@ -1,0 +1,19 @@
+t=int(input())
+l=[]
+count=0
+if(t>=1 and t<=100):
+    for i in range(0,t):
+        n=input()
+        if(len(n)>=1 and len(n)<=10000):
+            l.append(n)
+for i in l:
+    l1=list(i)
+    for j in range(0,len(l1)):
+        if(j+1<=len(l1)):
+            for k in range(j+1,len(l1)):
+                t=l1[j:k+1]
+                if(t==t[::-1]):
+                    #print(t)
+                    count=count+1
+    print(count)
+    count=0
