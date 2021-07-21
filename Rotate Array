@@ -1,0 +1,8 @@
+a=int(input())
+b=int(input())
+d=[]
+for i in range(0,a):
+    c=int(input())
+    d.append(c)
+rotate=d[b::]+d[0:b]
+print(rotate)
