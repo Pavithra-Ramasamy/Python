@@ -1,0 +1,12 @@
+a=input()
+b=int(input())
+a=a.split(" ")
+print(a)
+for i in a:
+    c=a.index(i)
+    print(i)
+    if(c==b-1):
+        a[c]=list(a[c])
+        a[c]=a[c][::-1]
+        a[c]=''.join(a[c])
+print(' '.join(a))       
