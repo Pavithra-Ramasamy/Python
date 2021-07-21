@@ -1,0 +1,12 @@
+a=input().split(' ')
+b=[]
+for i in a:
+    c=list(i)
+    d=c[::-1]
+    if(i==''.join(d)):
+        b.append(i)
+for i in b:
+    maxlen=len(i)
+    if(len(i)>=maxlen):
+        maxlen=len(i)
+print(i)    
