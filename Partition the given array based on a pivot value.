@@ -1,0 +1,23 @@
+n=int(input())
+l=[]
+l1=[]
+l2=[]
+l3=[]
+if(n>=1 and n<=100):
+    for i in range(0,n):
+        a=int(input())
+        if(a>=0 and a<=10000):
+            l.append(a)
+p=int(input())            
+for i in l:
+   if(i<p):
+       l1.append(i)
+       l1=sorted(l1,reverse=True)
+   elif(i==p):
+       l2.append(i)
+   elif(i>p):
+       l3.append(i)
+       l3=sorted(l3,reverse=True)
+res=l1+l2+l3
+for i in res:
+    print(i,end=" ")
