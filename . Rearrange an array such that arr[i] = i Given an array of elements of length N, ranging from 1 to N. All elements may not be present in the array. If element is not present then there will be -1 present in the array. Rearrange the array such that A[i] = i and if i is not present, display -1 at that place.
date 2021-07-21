@@ -1,0 +1,13 @@
+a=int(input())
+b=[]
+for i in range(0,a):
+   x=int(input())
+   b.append(x)
+print(b)
+for i in range(a,max(b)+1):
+    b.append(' ')
+for i in range(0,len(b)):
+    if (b[i]==i or i in b):
+        print(i)
+    else:
+        print(-1)
