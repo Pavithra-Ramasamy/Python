@@ -1,0 +1,20 @@
+l1=int(input())
+n1=[]
+n2=[]
+res=[]
+for i in range(0,l1):
+    a1=int(input())
+    n1.append(a1)
+    n1=sorted(n1)
+l2=int(input())    
+for i in range(0,l2):
+    a2=int(input())
+    n2.append(a2)
+    n2=sorted(n2)
+n3=n1+n2
+n3=sorted(n3)
+for i in n3:
+    if i not in res:
+        res.append(i)        
+for i in res:
+    print(i,end=" ")
