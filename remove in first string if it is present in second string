@@ -1,0 +1,11 @@
+a=input()
+b=input()
+a=list(a)
+b=list(b)
+l=[]
+print(a)
+print(b)
+for i in a:
+    if i not in b:
+        l.append(i)
+print(''.join(l))      
