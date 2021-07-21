@@ -1,0 +1,14 @@
+a=input()
+a=list(a)
+c=[]
+d=0
+b=['a','e','i','o','u','A','E','I','O','U']
+for i in range(0,len(a)):
+    if a[i] in b:
+        c.append(a[i])
+c.reverse()
+for i in range(0,len(a)):
+    if a[i] in b:
+        a[i]=c[d]
+        d=d+1
+print(''.join(a)) 
