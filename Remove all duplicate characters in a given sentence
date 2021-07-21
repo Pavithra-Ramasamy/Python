@@ -1,0 +1,8 @@
+a=input()
+b=[]
+cnt=0
+for i in a:
+    c=a[a.index(i)+1::]
+    if(i not in c):
+        b.append(i)
+print(''.join(b))   
