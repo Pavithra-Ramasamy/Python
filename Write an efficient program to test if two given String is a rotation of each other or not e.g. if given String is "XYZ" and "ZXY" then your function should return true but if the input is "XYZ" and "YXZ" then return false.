@@ -1,0 +1,7 @@
+a=input()
+b=input()
+c=2*a
+if((b in c) and (len(a)==len(b))):
+    print("True")
+else:
+    print("False")
