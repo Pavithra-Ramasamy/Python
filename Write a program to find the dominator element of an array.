@@ -1,0 +1,19 @@
+n=int(input())
+l=[]
+l2=[]
+flag=0
+if(n>=0 and n<=100000):
+    for i in range(0,n):
+        a=int(input())
+        if(a>=1 and a<=2147483647):
+            l.append(a)
+for i in l:
+    if i not in l2:
+        l2.append(i)
+for i in l2:
+    count=l.count(i)
+    if(count>len(l)//2):
+        flag=1
+        print(i)
+if(flag==0):
+    print("-1")
