@@ -1,0 +1,15 @@
+a=int(input())
+l=[]
+d=[]
+count=0
+for i in range(0,a):
+    b=input()
+    l.append(b)
+list(l)
+for i in range(0,a):
+    if l[i] not in d:
+        d.append(l[i])
+for i in range(0,len(d)):
+    if(l.count(d[i])==2):
+    count=count+1
+print(count)
