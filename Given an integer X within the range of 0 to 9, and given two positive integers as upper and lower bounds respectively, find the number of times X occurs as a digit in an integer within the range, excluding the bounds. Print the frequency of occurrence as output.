@@ -1,0 +1,8 @@
+a=int(input())
+u=int(input())
+l=int(input())
+c=0
+for i in range(u+1,l):
+    if str(a) in str(i):
+        c=c+str(i).count(str(a))
+print(c)    
